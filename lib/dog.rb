@@ -84,7 +84,9 @@ class Dog
    
       # dog IS empty, this dog doesn't exist in the db (empty? evaluates to true, !true is false)
    
-      self.new(name: name, breed: breed)
+      new_dog = self.new(name: name, breed: breed)
+      new_dog.save
+      new_dog
     end  
   end 
   

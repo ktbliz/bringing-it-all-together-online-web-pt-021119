@@ -62,7 +62,7 @@ class Dog
   def self.create(attributes)
     new_dog = self.new(name: nil, breed: nil)
     attributes.each { |key, value| new_dog.send("#{key}=", value) }
-    
+    new_dog.save
   end 
   
   def self.find_by_id(id) 
